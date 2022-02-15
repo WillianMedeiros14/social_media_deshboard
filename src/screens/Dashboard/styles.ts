@@ -12,6 +12,8 @@ export const ContainerHeader = styled.div `
     background-color: ${({theme}) => theme.colors.backgroundSecondary};
     display: flex;
     justify-content: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 `;
 
 export const Main = styled.main `
