@@ -1,6 +1,6 @@
 import React from "react";
 
-import { IconFacebook, IconUp } from '../../assets/icons';
+import { IconDown, IconFacebook, IconUp } from '../../assets/icons';
 
 import * as S from './styles';
 
@@ -10,6 +10,7 @@ interface Props {
     qtdFollowers: string;
     qtdFollowersToday: number; 
     type: string; 
+    decreaseViews: boolean;
 }
 
 export function CardPrimarySection({
@@ -17,7 +18,8 @@ export function CardPrimarySection({
     icon,
     qtdFollowers,
     qtdFollowersToday,
-    type
+    type,
+    decreaseViews
 }: Props){
     return(
         <S.Container type={type}>
@@ -36,8 +38,13 @@ export function CardPrimarySection({
             </S.ContainerCenter>
 
             <S.ContainerDay>
-                <S.IconUp src={IconUp} />
-                <S.TextToday>{qtdFollowersToday} Today</S.TextToday>
+                {
+                    decreaseViews ? 
+                    <S.IconUp src={IconDown} />
+                    :
+                    <S.IconUp src={IconUp} />
+                }
+                <S.TextToday decreaseViews={decreaseViews}>{qtdFollowersToday} Today</S.TextToday>
             </S.ContainerDay>
         </S.Container>
     )

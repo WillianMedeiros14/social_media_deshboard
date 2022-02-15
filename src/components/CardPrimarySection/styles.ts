@@ -2,7 +2,8 @@ import styled, {css} from "styled-components";
 import { breakpoints } from "../../styles/tools/breakpoints";
 
 interface Props {
-    type: string;
+    type?: string;
+    decreaseViews?: boolean;
 }
 
 export const Container = styled.div<Props>`
@@ -99,8 +100,8 @@ export const IconUp = styled.img `
     height: 5px;
 `;
 
-export const TextToday = styled.p `
-    color: ${({theme}) => theme.colors.limeGreen};
+export const TextToday = styled.p<Props> `
+    color: ${({theme, decreaseViews}) => decreaseViews ? theme.colors.brightRed : theme.colors.limeGreen};
     font-size: 12px;
     margin-left: 5px;
 `;

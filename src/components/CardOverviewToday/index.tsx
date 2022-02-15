@@ -1,6 +1,6 @@
 import React from "react";
 
-import { IconUp } from '../../assets/icons'
+import { IconDown, IconUp } from '../../assets/icons'
 
 import * as S from './styles';
 
@@ -9,13 +9,15 @@ interface Props {
     icon: string; 
     qtdFollowers: string; 
     qtdFollowersPercent: string;
+    decreaseViews: boolean;
 }
 
 export function CardOverviewToday({
     title,
     icon,
     qtdFollowers,
-    qtdFollowersPercent
+    qtdFollowersPercent,
+    decreaseViews
 }: Props){
     return (
         <S.Container>
@@ -27,8 +29,13 @@ export function CardOverviewToday({
             <S.ContainerSectionSecondary>
                 <S.NumberFollowers>{qtdFollowers}</S.NumberFollowers>
                 <S.ContainerViewPercent>
-                    <S.IconUp src={IconUp} />
-                    <S.TextFollowersPercent>{qtdFollowersPercent}</S.TextFollowersPercent>
+                    {
+                        decreaseViews ? 
+                        <S.IconUp src={IconDown} />
+                        :
+                        <S.IconUp src={IconUp} />
+                    }
+                    <S.TextFollowersPercent decreaseViews={decreaseViews}>{qtdFollowersPercent}</S.TextFollowersPercent>
                 </S.ContainerViewPercent>
             </S.ContainerSectionSecondary>
         </S.Container>

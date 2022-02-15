@@ -1,6 +1,10 @@
 import styled from "styled-components";
 import { breakpoints } from "../../styles/tools/breakpoints";
 
+interface Props {
+    decreaseViews: boolean;
+}
+
 export const Container = styled.div`
     width: 15.688rem;
     height: 7.75rem;
@@ -67,9 +71,9 @@ export const ContainerViewPercent= styled.div `
     margin-bottom: 3px;
 `;
 
-export const TextFollowersPercent = styled.p `
-    color: ${({theme}) => theme.colors.limeGreen};
-   font-size: 12px;
+export const TextFollowersPercent = styled.p<Props> `
+    color: ${({theme, decreaseViews}) => decreaseViews ? theme.colors.brightRed : theme.colors.limeGreen};
+    font-size: 12px;
     margin-left: 5px;font-size: 12px;
     margin-left: 5px;
 `;
