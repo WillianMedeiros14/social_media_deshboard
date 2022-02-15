@@ -7,7 +7,7 @@ import * as S from './styles';
 interface Props {
     userName: string; 
     icon: string; 
-    qtdFollowers: number;
+    qtdFollowers: string;
     qtdFollowersToday: number; 
     type: string; 
 }
