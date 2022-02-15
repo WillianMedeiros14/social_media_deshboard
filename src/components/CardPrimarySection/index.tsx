@@ -21,6 +21,10 @@ export function CardPrimarySection({
 }: Props){
     return(
         <S.Container type={type}>
+            {
+                type === 'instagran' &&
+                <S.BorderGradientInstagran />
+            }
             <S.ContainerUserName>
                 <S.Icon src={icon} />
                 <S.UserName>{userName}</S.UserName>

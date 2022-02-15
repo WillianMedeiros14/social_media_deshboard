@@ -20,7 +20,7 @@ export const Container = styled.div<Props>`
     `};
 
     ${({type, theme}) => type === 'instagran' && css `
-         border-color: ${({theme}) => theme.colors.toggle};
+         border-top: 0px;
     `};
 
     ${({type}) => type === 'youTube' && css `
@@ -37,7 +37,18 @@ export const Container = styled.div<Props>`
         cursor: pointer;
         background-color: rgba(223, 225, 236, 0.1);
     }
+    position: relative;
 `;
+
+export const BorderGradientInstagran = styled.div`
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 4px;
+    background-image: linear-gradient(to right, #fdc468, #df4996);
+    position: absolute;
+    top: 0;
+`
 
 export const ContainerUserName = styled.div `
     display: flex;

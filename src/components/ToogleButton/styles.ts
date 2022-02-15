@@ -8,7 +8,6 @@ export const Container = styled.button `
     width: 51px;
     height: 24px;
     border-radius: 20px;
-    /* background-image: linear-gradient('#378fe6', '#3eda82'); */
     background-image: linear-gradient(to right, #378fe6, #3eda82);
     border: 0;
     cursor: pointer;
