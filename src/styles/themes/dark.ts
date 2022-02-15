@@ -1,5 +1,6 @@
 export default {
     colors: {
+
         background: "#1E202A",
         backgroundSecondary: "#1F212E",
         cardBackground: "#252A41",
@@ -13,7 +14,6 @@ export default {
         youTube: "#DC414C",
         linearInstagranPrimary: '#fdc468',
         linearInstagranSecondary: '#df4996',
-
 
         toggle: '#aeb3cb',
     }

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { breakpoints } from "../../styles/tools/breakpoints";
 
 export const Container = styled.div`
     width: 15.688rem;
@@ -15,6 +16,11 @@ export const Container = styled.div`
     &:hover {
         cursor: pointer;
         background-color: rgba(223, 225, 236, 0.1);
+    }
+
+    @media (max-width: ${breakpoints.Mobile}) {
+        width: 100%;
+        align-self: center;
     }
 `;
 

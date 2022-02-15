@@ -1,4 +1,5 @@
 import styled, {css} from "styled-components";
+import { breakpoints } from "../../styles/tools/breakpoints";
 
 interface Props {
     type: string;
@@ -36,6 +37,11 @@ export const Container = styled.div<Props>`
     &:hover {
         cursor: pointer;
         background-color: rgba(223, 225, 236, 0.1);
+    }
+
+    @media (max-width: ${breakpoints.Mobile}) {
+        width: 100%;
+        align-self: center;
     }
     position: relative;
 `;
