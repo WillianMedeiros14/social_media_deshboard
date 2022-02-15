@@ -23,9 +23,13 @@ export const TotalFollowers = styled.h3 `
 
 
 export const ContentSecondary = styled.div `
-   
+   display: flex;
+  
 `;
 
 export const TextThemeMode = styled.p `
     color: ${({theme}) => theme.colors.textSecondary};
+    margin-right: 15px;
+    margin-top: 2px;
+    font-weight: 600;
 `;

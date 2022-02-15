@@ -1,8 +1,14 @@
 import React from 'react';
+import { ToogleButton } from '..';
 
 import * as S from './styles';
 
-export function Header() {
+interface Props{
+    handlePress: () => void;
+    themeDark: boolean;
+}
+
+export function Header({handlePress, themeDark}:Props) {
     return(
         <S.Container>
             <S.ContentPrimary>
@@ -12,6 +18,7 @@ export function Header() {
 
             <S.ContentSecondary>
                 <S.TextThemeMode>Dark Mode</S.TextThemeMode>
+                <ToogleButton handlePress={handlePress} themeDark={themeDark} />
             </S.ContentSecondary>
         </S.Container>
     )

@@ -4,7 +4,13 @@ import { Header, CardPrimarySection, CardOverviewToday } from '../../components'
 
 import * as S from './styles'
 
-export function Dashboard(){
+
+interface Props{
+    handlePress: () => void;
+    themeDark: boolean;
+}
+
+export function Dashboard({handlePress, themeDark}:Props){
     const [dataPrimaryCard, setDataPrimaryCard] = useState([
         {id: 1, userName: '@nathanf', icon: IconFacebook, qtdFollowers: '1987', qtdFollowersToday: 12, type: 'facebook'},
         {id: 2, userName: '@nathanf', icon: IconTwitter, qtdFollowers: '1044', qtdFollowersToday: 99, type: 'twiter'},
@@ -27,7 +33,7 @@ export function Dashboard(){
     return (
         <S.Container>
             <S.ContainerHeader>
-                <Header />
+                <Header handlePress={handlePress} themeDark={themeDark}/>
             </S.ContainerHeader>
 
             <S.Main>

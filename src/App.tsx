@@ -29,7 +29,7 @@ function App() {
     <ThemeProvider theme={theme === "light" ? light : dark}>
       <Fragment>
         <GlobalTheme />
-        <Dashboard />
+        <Dashboard handlePress={toggleTheme} themeDark={theme === "dark" ? true : false }/>
       </Fragment>
     </ThemeProvider>
   );
