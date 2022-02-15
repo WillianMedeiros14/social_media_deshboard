@@ -34,7 +34,7 @@ export function Dashboard({handlePress, themeDark}:Props){
         <S.Container>
             <S.ContainerHeader>
                 <Header handlePress={handlePress} themeDark={themeDark}/>
-            </S.ContainerHeader>
+            </S.ContainerHeader> 
 
             <S.Main>
                 <S.Content>
